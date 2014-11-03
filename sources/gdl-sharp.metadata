@@ -9,6 +9,7 @@
 	<attr path="/api/namespace/object[@name='Dock']/method[@name='XorRect']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='Dock']/method[@name='XorRectHide']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='DockBar']/method[@name='SetOrientation']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockBar']/method[@name='GetOrientation']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='DockItem']/virtual_method[@name='SetOrientation']" name="hidden">1</attr>
   	<attr path="/api/namespace/object[@name='DockLayout']/method[@name='GetLayouts']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='DockObject']/method[@name='DockRequest']" name="hidden">1</attr>

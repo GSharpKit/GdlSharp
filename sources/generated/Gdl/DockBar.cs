@@ -89,18 +89,6 @@ namespace Gdl {
 		}
 
 		[DllImport("libgdl-3.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
-		static extern int gdl_dock_bar_get_orientation(IntPtr raw);
-
-		[Obsolete]
-		public new Gtk.Orientation Orientation { 
-			get {
-				int raw_ret = gdl_dock_bar_get_orientation(Handle);
-				Gtk.Orientation ret = (Gtk.Orientation) raw_ret;
-				return ret;
-			}
-		}
-
-		[DllImport("libgdl-3.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr gdl_dock_bar_get_type();
 
 		public static new GLib.GType GType { 

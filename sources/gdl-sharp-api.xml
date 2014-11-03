@@ -163,7 +163,7 @@
       <field name="Priv" cname="priv" type="GdlDockBarPrivate*" />
       <property name="Master" cname="master" type="GObject" readable="true" writeable="true" />
       <property name="DockbarStyle" cname="dockbar-style" type="GdlDockBarStyle" readable="true" writeable="true" construct="true" />
-      <method name="GetOrientation" cname="gdl_dock_bar_get_orientation" deprecated="1">
+      <method name="GetOrientation" cname="gdl_dock_bar_get_orientation" deprecated="1" hidden="1">
         <return-type type="GtkOrientation" />
       </method>
       <method name="GetStyle" cname="gdl_dock_bar_get_style">
