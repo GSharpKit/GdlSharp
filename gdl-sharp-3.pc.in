@@ -5,5 +5,5 @@ libdir=${exec_prefix}/lib
 Name: @ASSEMBLY_TITLE@
 Description: @ASSEMBLY_DESCRIPTION@
 Version: @VERSION@
-Requires: 
+Requires: gtk-sharp-3.0 
 Libs: -r:${libdir}/mono/@ASSEMBLY_NAME@/@ASSEMBLY_NAME@.dll
