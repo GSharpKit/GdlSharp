@@ -10,7 +10,7 @@ configure
 gdl-sharp-3.pc
 install-sh
 missing
-out/
+out/gdl-sharp.dll
 sources/AssemblyInfo.cs
 sources/Makefile
 sources/Makefile.in
