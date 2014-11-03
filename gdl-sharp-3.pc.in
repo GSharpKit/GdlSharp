@@ -1,6 +1,6 @@
 prefix=@prefix@
 exec_prefix=${prefix}
-libdir=@libdir@
+libdir=${exec_prefix}/lib
 
 Name: @ASSEMBLY_TITLE@
 Description: @ASSEMBLY_DESCRIPTION@

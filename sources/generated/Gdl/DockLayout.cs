@@ -104,15 +104,6 @@ namespace Gdl {
 		}
 
 		[DllImport("libgdl-3.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
-		static extern IntPtr gdl_dock_layout_get_layouts(IntPtr raw, bool include_default);
-
-		public GLib.List GetLayouts(bool include_default) {
-			IntPtr raw_ret = gdl_dock_layout_get_layouts(Handle, include_default);
-			GLib.List ret = new GLib.List(raw_ret);
-			return ret;
-		}
-
-		[DllImport("libgdl-3.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr gdl_dock_layout_get_type();
 
 		public static new GLib.GType GType { 

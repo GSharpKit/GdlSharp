@@ -475,7 +475,7 @@
           <parameter type="const-gchar*" name="name" />
         </parameters>
       </method>
-      <method name="GetLayouts" cname="gdl_dock_layout_get_layouts">
+      <method name="GetLayouts" cname="gdl_dock_layout_get_layouts" hidden="1">
         <return-type type="GList*" />
         <parameters>
           <parameter type="gboolean" name="include_default" />
@@ -761,7 +761,7 @@
       <method name="Present" cname="gdl_dock_object_present">
         <return-type type="void" />
         <parameters>
-          <parameter type="GdlDockObject*" name="child" />
+          <parameter type="GdlDockObject*" name="child" null_ok="1" />
         </parameters>
       </method>
       <method name="Reduce" cname="gdl_dock_object_reduce">
