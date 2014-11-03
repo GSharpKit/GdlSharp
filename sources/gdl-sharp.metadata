@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<metadata>
+	<attr path="/api/namespace/enum[@name='DockItemFlags']/member[@cname='GDL_DOCK_IN_DRAG']" name="value">1 &lt;&lt; 8</attr>
+	<attr path="/api/namespace/enum[@name='DockItemFlags']/member[@cname='GDL_DOCK_IN_PREDRAG']" name="value">1 &lt;&lt; 9</attr>
+	<attr path="/api/namespace/enum[@name='DockItemFlags']/member[@cname='GDL_DOCK_ICONIFIED']" name="value">1 &lt;&lt; 10</attr>
+	<attr path="/api/namespace/enum[@name='DockItemFlags']/member[@cname='GDL_DOCK_USER_ACTION']" name="value">1 &lt;&lt; 11</attr>
+	<attr path="/api/namespace/enum[@name='DockParamFlags']/member[@cname='GDL_DOCK_PARAM_EXPORT']" name="value">1 &lt;&lt; 0</attr>
+	<attr path="/api/namespace/enum[@name='DockParamFlags']/member[@cname='GDL_DOCK_PARAM_AFTER']" name="value">1 &lt;&lt; 1</attr>
+	<attr path="/api/namespace/object[@name='Dock']/method[@name='XorRect']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='Dock']/method[@name='XorRectHide']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockBar']/method[@name='SetOrientation']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockItem']/virtual_method[@name='SetOrientation']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/virtual_method[@name='Reduce']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/virtual_method[@name='DockRequest']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/method[@name='DockRequest']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/virtual_method[@name='Reorder']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/virtual_method[@name='Present']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/virtual_method[@name='ChildPlacement']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/signal[@name='Detach']" name="name">Detached</attr>
+	<attr path="/api/namespace/object[@name='DockObject']/signal[@name='Dock']" name="name">Docked</attr>
+</metadata>
+
