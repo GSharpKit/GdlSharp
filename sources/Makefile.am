@@ -41,10 +41,10 @@ api:
 $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 	cp $(srcdir)/$(RAW_API) $(API)
 	chmod u+w $(API)
-	$(GAPI_FIXUP) --api=$(srcdir)/$(API) --metadata=$(srcdir)/$(METADATA)
+	$(GAPI_FIXUP) --api=$(API) --metadata=$(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
-	 $(GAPI_CODEGEN) --generate $(srcdir)/$(API) $(GTK_SHARP_CFLAGS) \
+	 $(GAPI_CODEGEN) --generate $(API) $(GTK_SHARP_CFLAGS) \
 		--outdir=generated \
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
