@@ -127,6 +127,7 @@ AC_CONFIG_FILES([
 	sources/Makefile
 	sources/AssemblyInfo.cs
 	gdl-sharp-3.pc
+	out/gdl-sharp.dll.config
 ])
 AC_CONFIG_COMMANDS([default],[[ echo timestamp > stamp-h ]],[[]])
 AC_OUTPUT

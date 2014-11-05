@@ -6,5 +6,5 @@ pkgconfig_DATA=gdl-sharp-3.pc
 
 
 EXTRA_DIST = gdl-sharp-3.pc.in
-DISTCLEANFILES = gdl-sharp-3.pc
+DISTCLEANFILES = gdl-sharp-3.pc gdl-sharp.dll.config
 
