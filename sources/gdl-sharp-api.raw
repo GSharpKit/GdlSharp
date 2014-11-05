@@ -6,7 +6,7 @@
         Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
 
 -->
-  <namespace name="Gdl" library="libgdl-3.0-0.dll">
+  <namespace name="Gdl" library="libgdl-3-5.dll">
     <enum name="DockBarStyle" cname="GdlDockBarStyle" gtype="gdl_dock_bar_style_get_type" type="enum">
       <member cname="GDL_DOCK_BAR_ICONS" name="Icons" />
       <member cname="GDL_DOCK_BAR_TEXT" name="Text" />
