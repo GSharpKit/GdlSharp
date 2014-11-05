@@ -49,8 +49,8 @@ generated-stamp: $(API)
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
 $(DLL): $(build_sources) generated-stamp
-	$(CSC) -keyfile:gdl-sharp.snk -nowarn:169 -unsafe -target:library $(GTK_SHARP_LIBS) \
-		$(build_sources) Gdl/*.cs  generated/*/*.cs -out:$(DLL)
+	$(CSC) -keyfile:$(srcdir)/gdl-sharp.snk -nowarn:169 -unsafe -target:library $(GTK_SHARP_LIBS) \
+		$(build_sources) $(srcdir)/Gdl/*.cs  generated/*/*.cs -out:$(DLL)
 
 install-data-local:
 	echo "$(GACUTIL) /i $(DLL) /f $(GACUTIL_FLAGS)";  \
