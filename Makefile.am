@@ -1,7 +1,7 @@
 SUBDIRS = sources
 
 pkg = gdl
-pkgconfigdir=$(libdir)/pkgconfig
+pkgconfigdir=$(datadir)/pkgconfig
 pkgconfig_DATA=gdl-sharp-3.pc
 
 
