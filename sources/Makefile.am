@@ -28,7 +28,7 @@ all: generated-stamp $(ASSEMBLY)
 
 
 GTK_DOWNLOADS = \
-	http://ftp.gnome.org/pub/GNOME/sources/gdl/3.14/gdl-3.14.0.tar.xz
+	http://ftp.gnome.org/pub/GNOME/sources/gdl/3.20/gdl-3.20.0.tar.xz
 
 get-source-code:
 	for i in $(GTK_DOWNLOADS); do                  \

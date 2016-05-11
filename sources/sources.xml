@@ -2,7 +2,7 @@
   <api filename="gdl-sharp-api.raw">
     <library name="libgdl-3-5.dll">
       <namespace name="Gdl">
-        <directory path="gdl-3.14.0/gdl">
+        <directory path="gdl-3.20.0/gdl">
         </directory>
       </namespace>
     </library>
