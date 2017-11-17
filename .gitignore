@@ -1,3 +1,4 @@
+out/
 Makefile
 Makefile.in
 aclocal.m4
@@ -10,12 +11,8 @@ configure
 gdl-sharp-3.pc
 install-sh
 missing
-out/gdl-sharp.dll
-sources/AssemblyInfo.cs
 sources/Makefile
 sources/Makefile.in
-sources/gdl-*
-sources/generated-stamp
-sources/generated/*
+sources/gdl-*/
 stamp-h
 
