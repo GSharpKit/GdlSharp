@@ -11,6 +11,7 @@
 	<attr path="/api/namespace/object[@name='DockBar']/method[@name='SetOrientation']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='DockBar']/method[@name='GetOrientation']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='DockItem']/virtual_method[@name='SetOrientation']" name="hidden">1</attr>
+	<attr path="/api/namespace/object[@name='DockItem']/method[@name='PreferredSize']" name="hidden">1</attr>
   	<attr path="/api/namespace/object[@name='DockLayout']/method[@name='GetLayouts']" name="hidden">1</attr>
 	<attr path="/api/namespace/object[@name='DockObject']/method[@name='DockRequest']" name="hidden">1</attr>
   	<attr path="/api/namespace/object[@name='DockObject']/method[@name='Present']/parameters/parameter[@name='child']" name="null_ok">1</attr>
