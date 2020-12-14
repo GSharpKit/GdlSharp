@@ -15,4 +15,6 @@ sources/Makefile
 sources/Makefile.in
 sources/gdl-*/
 stamp-h
+sources/generated-stamp
+sources/generated/
 

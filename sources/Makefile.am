@@ -28,7 +28,7 @@ all: generated-stamp $(ASSEMBLY)
 
 
 GTK_DOWNLOADS = \
-	http://ftp.gnome.org/pub/GNOME/sources/gdl/3.26/gdl-3.26.0.tar.xz
+	http://ftp.gnome.org/pub/GNOME/sources/gdl/3.34/gdl-3.34.0.tar.xz
 
 get-source-code:
 	for i in $(GTK_DOWNLOADS); do                  \
@@ -49,13 +49,11 @@ generated-stamp: $(API)
 	 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
 $(DLL): $(build_sources) generated-stamp
-	$(CSC) -keyfile:$(srcdir)/gdl-sharp.snk -nowarn:169 -unsafe -target:library $(GTK_SHARP_LIBS) \
-		$(build_sources) generated/*/*.cs -out:$(DLL)
+	$(CSC) -unsafe -target:library $(GTK_SHARP_LIBS) $(build_sources) generated/*/*.cs -out:$(DLL)
 
 install-data-local:
-	echo "$(GACUTIL) /i $(DLL) /f $(GACUTIL_FLAGS)";  \
-        $(GACUTIL) /i $(DLL) /f $(GACUTIL_FLAGS) || exit 1;
+	install -d -m 755 $(DESTDIR)$(libdir)
+	install -m 644 $(ASSEMBLY) $(DESTDIR)$(libdir)/
 
 uninstall-local:
-	echo "$(GACUTIL) /u $(ASSEMBLY_NAME) $(GACUTIL_FLAGS)"; \
-        $(GACUTIL) /u $(ASSEMBLY_NAME) $(GACUTIL_FLAGS) || exit 1;
+	-rm $(DESTDIR)$(libdir)/$(ASSEMBLY)

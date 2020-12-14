@@ -1,4 +1,4 @@
-AC_INIT([gdl-sharp], [3.26.0])
+AC_INIT([gdl-sharp], [3.34.0])
 AC_CONFIG_SRCDIR([README])
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
@@ -6,9 +6,9 @@ AM_MAINTAINER_MODE
 AC_PROG_INSTALL
 
 dnl Package settings
-ASSEMBLY_COMPANY="XMedicus ApS"
-ASSEMBLY_COPYRIGHT="2015, 2016, 2017 XMedicus ApS, Mikkel Kruse Johnsen"
-ASSEMBLY_DESCRIPTION="Gdl-3 bindings for Mono"
+ASSEMBLY_COMPANY="XMedicus Systems ApS"
+ASSEMBLY_COPYRIGHT="2015, 2016, 2017, 2018, 2019, 2020 XMedicus ApS, Mikkel Kruse Johnsen"
+ASSEMBLY_DESCRIPTION="Gdl-3 bindings for C#"
 ASSEMBLY_NAME="gdl-sharp"
 ASSEMBLY_NAMESPACE="Gdl"
 ASSEMBLY_PC="gdl-sharp-3"
@@ -33,12 +33,15 @@ if test "x$PKG_CONFIG" = "xno"; then
 	AC_MSG_ERROR(['pkg-config' is not in your PATH.])
 fi
 
+NETSTANDARD_REFERENCE_DIR="/usr/lib/mono/xbuild-frameworks/.NETStandard/netstandard2.0"
+AC_SUBST(NETSTANDARD_REFERENCE_DIR)
+
 dnl Check for Mono
 PKG_CHECK_MODULES(MONO_DEPENDENCY, mono >= 1.0, has_mono=true, has_mono=false)
 
 if test "x$has_mono" = "xtrue"; then
 	AC_PATH_PROG(RUNTIME, mono, no)
-	AC_PATH_PROG(CSC, mcs, no)
+	AC_PATH_PROG(CSC, csc, no)
 	LIB_PREFIX=.so
 	LIB_SUFFIX=
 else
@@ -52,22 +55,15 @@ else
 	fi
 fi
 
+CSC="$CSC -nologo -nowarn:CS0649,CS0169 -nostdlib -noconfig -r:${NETSTANDARD_REFERENCE_DIR}/netstandard.dll"
+
 CS="C#"
 if test "x$CSC" = "xno" ; then
     AC_MSG_ERROR([No $CS compiler found])
 fi
 
-AC_PATH_PROG(GACUTIL, gacutil, no)
-if test "x$GACUTIL" = "xno" ; then
-	AC_MSG_ERROR([No gacutil tool found])
-fi
-
-GACUTIL_FLAGS="/package $ASSEMBLY_NAME /root "'$(DESTDIR)$(prefix)/lib'
-                                     
 AC_SUBST(RUNTIME)
 AC_SUBST(CSC)
-AC_SUBST(GACUTIL)
-AC_SUBST(GACUTIL_FLAGS)
 AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
