@@ -53,7 +53,8 @@ $(DLL): $(build_sources) generated-stamp
 
 install-data-local:
 	install -d -m 755 $(DESTDIR)$(libdir)
-	install -m 644 $(ASSEMBLY) $(DESTDIR)$(libdir)/
+	install -m 644 $(DLL) $(DESTDIR)$(libdir)/
+	install -m 644 $(DLLMAP) $(DESTDIR)$(libdir)/
 
 uninstall-local:
 	-rm $(DESTDIR)$(libdir)/$(ASSEMBLY)
